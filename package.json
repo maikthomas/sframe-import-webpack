@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "A repo to test the import of the webpack build of sframe",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maikthomas/sframe-import-webpack.git"
@@ -13,12 +10,19 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/maikthomas/sframe-import-webpack/issues"
-  },
   "homepage": "https://github.com/maikthomas/sframe-import-webpack#readme",
+  "scripts": {
+    "clean": "rm dist/bundle.js",
+    "build-dev": "webpack --mode development",
+    "build-prod": "webpack --mode production",
+    "dev": "webpack serve --mode development"
+  },
+  "dependencies": {
+    "sframe": "git+https://github.com/maikthomas/sframe.git#add-webpack-build"
+  },
   "devDependencies": {
     "webpack": "^5.64.4",
-    "webpack-cli": "^4.9.1"
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0"
   }
 }
